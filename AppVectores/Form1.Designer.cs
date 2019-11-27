@@ -31,7 +31,7 @@
             this.txtEntero = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lstEnterosIngresados = new System.Windows.Forms.ListBox();
+            this.lstNum = new System.Windows.Forms.ListBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnMostrarRegistro = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -68,13 +68,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Lista de enteros ingresados  : ";
             // 
-            // lstEnterosIngresados
+            // lstNum
             // 
-            this.lstEnterosIngresados.FormattingEnabled = true;
-            this.lstEnterosIngresados.Location = new System.Drawing.Point(15, 88);
-            this.lstEnterosIngresados.Name = "lstEnterosIngresados";
-            this.lstEnterosIngresados.Size = new System.Drawing.Size(145, 108);
-            this.lstEnterosIngresados.TabIndex = 3;
+            this.lstNum.FormattingEnabled = true;
+            this.lstNum.Location = new System.Drawing.Point(15, 88);
+            this.lstNum.Name = "lstNum";
+            this.lstNum.Size = new System.Drawing.Size(145, 108);
+            this.lstNum.TabIndex = 3;
             // 
             // btnAgregar
             // 
@@ -92,8 +92,9 @@
             this.btnMostrarRegistro.Name = "btnMostrarRegistro";
             this.btnMostrarRegistro.Size = new System.Drawing.Size(152, 23);
             this.btnMostrarRegistro.TabIndex = 5;
-            this.btnMostrarRegistro.Text = "MOSTRAR REGISTRO";
+            this.btnMostrarRegistro.Text = "CALCULAR";
             this.btnMostrarRegistro.UseVisualStyleBackColor = true;
+            this.btnMostrarRegistro.Click += new System.EventHandler(this.btnMostrarRegistro_Click);
             // 
             // label3
             // 
@@ -140,12 +141,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnMostrarRegistro);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.lstEnterosIngresados);
+            this.Controls.Add(this.lstNum);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEntero);
             this.Name = "Form1";
             this.Text = "VECTORES";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,7 +158,7 @@
         private System.Windows.Forms.TextBox txtEntero;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox lstEnterosIngresados;
+        private System.Windows.Forms.ListBox lstNum;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnMostrarRegistro;
         private System.Windows.Forms.Label label3;
