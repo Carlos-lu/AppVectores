@@ -32,13 +32,16 @@ namespace AppVectores
                 if (contador < MAX)
                 {
                     vector[contador] = int.Parse(this.txtEntero.Text);
+                    this.txtEntero.Text = "";
+                    this.txtEntero.Focus();
+                    MessageBox.Show("Elemento exitosamente agregado");
                     llenarLista();
-                    MessageBox.Show("Elemento exitosamente agregado")
                 }
                 contador++;
     }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
+                
             }
 
         }
@@ -49,6 +52,7 @@ namespace AppVectores
         private void llenarLista()
         {
             //AGREGAR ELEMENTO AL LISTBOX
+            this.lstNum.Items.Clear();
             for (int i = 0; i < contador; i++)
             {
                 this.lstNum.Items.Add(vector[i]);
@@ -57,7 +61,7 @@ namespace AppVectores
 
         private void btnMostrarRegistro_Click(object sender, EventArgs e)
         {
-            
+            llenarLista();
             this.txtSuma.Text = sumatoria().ToString();
             this.txtPromedio.Text = promedio().ToString();
 
